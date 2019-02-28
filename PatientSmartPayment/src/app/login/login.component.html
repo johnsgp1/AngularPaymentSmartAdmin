@@ -48,7 +48,7 @@
           </div>
           <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
               <div class="well no-padding">
-                  <form action="#/dashboard" id="login-form" class="smart-form client-form"  data-smart-validate-form>
+                  <form  #UserLoginForm="ngForm" (ngSubmit)="GetLoginService(UserLoginForm)" id="login-form" class="smart-form client-form"  data-smart-validate-form>
                       <header>
                           Sign In
                       </header>
@@ -61,7 +61,7 @@
                                          data-required
                                          data-email
                                          data-message-required="Please enter your email address"
-                                         data-message-email="Please enter a VALID email address">
+                                         data-message-email="Please enter a VALID email address" #email="ngModel" [(ngModel)]="mymodel1">
                                   <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i>
                                       Please enter email address/username</b></label>
                           </section>
@@ -73,7 +73,7 @@
                                         data-required
                                         data-minlength="3"
                                         data-maxnlength="20"
-                                        data-message="Please enter your email password">
+                                        data-message="Please enter your email password" #password="ngModel" [(ngModel)]="mymodel2">
                                   <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter
                                       your password</b> </label>
 
