@@ -9,13 +9,11 @@ declare var $that:any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit,AfterViewInit {
-
   constructor(){}
   paymentForm; //this is our payment form object
-
   ngOnInit(){
     document.addEventListener('DOMContentLoaded', () => {
-     alert('hi')
+    // alert('hi')
     });
     console.log("sitemap component init");
     // Set the application ID

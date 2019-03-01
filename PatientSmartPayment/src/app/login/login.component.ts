@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   .subscribe((data:any)=>{
     if(data!==null){
       this.routes.navigate(['/home']);
+      window.location.reload();
       //this.routes.navigate(['/paymentResponse'])
       
      }
