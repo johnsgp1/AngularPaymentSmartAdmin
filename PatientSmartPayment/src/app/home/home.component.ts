@@ -14,6 +14,10 @@ export class HomeComponent implements OnInit,AfterViewInit {
   paymentForm; //this is our payment form object
 
   ngOnInit(){
+    document.addEventListener('DOMContentLoaded', () => {
+     alert('hi')
+    });
+    console.log("sitemap component init");
     // Set the application ID
     var applicationId = "sandbox-sq0idp-_5eUpZ_kZLEpEAlOJOa8-w";
 
