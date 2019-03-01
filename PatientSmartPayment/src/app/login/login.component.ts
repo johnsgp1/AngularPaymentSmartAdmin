@@ -15,13 +15,12 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   GetLoginService(forms:NgForm){
-  alert(forms);
   var a =forms.value;
   this.loginService.loginService(forms.value)
   .subscribe((data:any)=>{
     if(data!==null){
-      alert(data.sCliniName);
-      this.routes.navigate(['/home'])
+      this.routes.navigate(['/home']);
+      //this.routes.navigate(['/paymentResponse'])
       
      }
    });

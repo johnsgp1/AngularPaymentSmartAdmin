@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import {sqpaymentform} from  '../../assets/js/sqpaymentform-basic.js';
+import {AfterViewInit, Component, OnInit, NgModule} from '@angular/core';
 declare var SqPaymentForm : any;
+declare var $that:any;
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit,AfterViewInit {
 
   constructor(){}
-
   paymentForm; //this is our payment form object
 
   ngOnInit(){
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
 
     // Set the location ID
     var locationId = "CBASELjav8kAOzgP4SZlbX46e_IgAQ";
+    
     this.paymentForm = new SqPaymentForm({
 
       // Initialize the payment form elements
@@ -125,13 +127,14 @@ export class HomeComponent implements OnInit {
             errors.forEach(function(error) {
               console.log('  ' + error.message);
               alert(error.message);
+              
             });
     
             return;
           }
     
           alert('Nonce received: ' + nonce); /* FOR TESTING ONLY */
-    
+        
           // Assign the nonce value to the hidden form field
           // document.getElementById('card-nonce').value = nonce;
           //needs to be extracted from the
@@ -141,7 +144,7 @@ export class HomeComponent implements OnInit {
     
           // POST the nonce form to the payment processing page
           (<HTMLFormElement>document.getElementById('nonce-form')).submit();
-    
+          $that.submitNounceTobackend(nonce);
         },
     
         /*
@@ -199,5 +202,4 @@ export class HomeComponent implements OnInit {
     this.paymentForm.requestCardNonce();
   }
   ngAfterViewInit(){}
-
 }

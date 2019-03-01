@@ -1,3 +1,113 @@
-<p>
-  payment-confirmation works!
-</p>
+<header id="header" class="animated fadeInDown">
+
+    <div id="logo-group">
+      <span id="logo"> <img src="../assets/img/logo.png" alt="SmartAdmin"> </span>
+    </div>
+  
+    <span id="extr-page-header-space"> <span class="hidden-mobile hiddex-xs">Need an account?</span> <a ui-sref="register"
+        class="btn btn-danger">Create account</a> </span>
+  
+  </header>
+  <div id="main" role="main" class="animated fadeInDown" style="margin-left: 50px;">
+  
+    <div id="content" class="container">
+        <div class="product-content product-wrap clearfix">
+            <h2 class="name" style="margin-left: 5px;">
+                Payment information
+        
+        
+              </h2>
+              <hr>
+            <div class="row">
+                <div class="col-md-5 col-sm-12 col-xs-12">
+                    <div class="product-image" style="height: 350px;margin-left: 40px;">
+                        <h3 class="price-container">
+                          Total Balance:$129.54
+                          <small>*includes tax</small>
+                        </h3>
+                        <div class="certified">
+                            <div style="font-size: 16Px;margin-left: 5px;"><label class="" style="font-size: 16Px;"><b>Patient:</b></label><b>Test
+                                Patient</b></div>
+                                <div style="font-size: 16Px;margin-left: 5px;"><label class="blue" style="font-size: 16Px;"><b>MRN:</b></label><b>Test
+                                    Patient</b></div>
+                                    <div style="font-size: 16Px;margin-left: 5px;"><label class="blue" style="font-size: 16Px;"><b>Email:</b></label><b>Test
+                                        Patient</b></div>
+                                        <div style="font-size: 16Px;margin-left: 5px;"><label class="blue" style="font-size: 16Px;"><b>Phone:</b></label><b>Test
+                                            Patient</b></div>
+                                            <div style="font-size: 16Px;margin-left: 5px;"><label class="blue" style="font-size: 16Px;"><b>Balance:</b></label><b>Test
+                                                Patient</b></div>
+                          <ul>
+            
+                          </ul>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-7 col-sm-12 col-xs-12">
+                    <div class="" style="height: 200px;">
+  
+            
+            
+                      </div>
+                </div>
+                
+            </div>
+            <div class="">
+                <hr>
+                <h2 class="name" style="margin-left: 5px;">
+                    Payment plan
+            
+            
+                  </h2>
+                <hr>
+                <div>
+                    <div class="col-xs-12 col-sm-6" style="width: auto">
+                        <div class="control-group">
+                        
+                          <div class="radio">
+                            <label>
+                                                                                                        <input name="form-field-radio" type="radio" checked="" class="ace">
+                                                                                                            <span class="lbl" style="width: 400px;"><b> Pay my balance of $100.00 in full</b></span>
+                            </label>
+                          </div>
+    
+                          <div class="radio">
+                            <label>
+                              <input name="form-field-radio" type="radio" class="ace">
+                                                                                                            <span class="lbl" style="width: 400px;"> <b>Pay my balance of $100.00 in 2 installments</b></span>
+                            </label>
+                          </div>
+                        </div>
+                            <table id="paymentDet" class="table table-striped table-hover table-condensed hidden" style="margin-top: 30px;margin-bottom: 10px;">
+                    <thead>
+                      <tr>
+                          <th width="15%" class="" > Date of charge</th>
+                          <th width="14%" class="" >Amount</th>
+                          
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>02/02/219</td>
+                          <td>$50.00</td>
+                      </tr>
+                      <tr>
+                          <td>03/02/219</td>
+                          <td>$50.00</td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                </tbody>
+                </table>
+                <div class="pull-right" style="padding-bottom: 10px;">
+                    <button id="sq-creditcard" class="button-credit-card"   onclick="requestCardNonce(event)">Pay $100.00</button>
+                </div>								
+            </div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+  </div>
+  

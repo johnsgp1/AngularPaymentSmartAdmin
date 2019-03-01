@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm} from '@angular/forms'
 
 @Component({
   selector: 'app-payment-confirmation',
@@ -11,5 +12,7 @@ export class PaymentConfirmationComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  GetPaymentService(form:NgForm){
+    alert(form);
+  }
 }
